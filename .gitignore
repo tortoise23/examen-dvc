@@ -5,13 +5,26 @@ __pycache__/
 # Virtual environment
 env/
 
-# DVC cache and outputs
-*.dvc
-!*.dvc  # allow .dvc pointer files
-data/
-models/
-metrics/
+# DVC cache
 .dvc/cache/
+.dvc/tmp/
+
+# DVC-related exceptions
+!.dvc/
+!data/**/*.dvc
+!models/**/*.dvc
+!metrics/**/*.dvc
+
+# Ignore raw files, but track via DVC
+data/*
+models/*
+metrics/*
+
+# Don't ignore pointer files or metrics
+!data/raw/
+!data/**/*.csv
+!metrics/scores.json
+!data/predictions.csv
 
 # Logs and artifacts
 *.log
