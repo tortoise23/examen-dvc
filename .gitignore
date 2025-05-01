@@ -1,2 +1,20 @@
-/venv
-/clean_data.csv
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+env/
+
+# DVC cache and outputs
+*.dvc
+!*.dvc  # allow .dvc pointer files
+data/
+models/
+metrics/
+.dvc/cache/
+
+# Logs and artifacts
+*.log
+*.joblib
+*.json
+*.csv
